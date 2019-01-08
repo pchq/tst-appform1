@@ -1,0 +1,21 @@
+.form {
+	color: $color-gray;
+
+	&__section {
+		margin-bottom: 2px;
+		padding: rem-calc(30px) rem-calc(15px) 0;
+		background: $color-white url("../images/bg.jpg");
+	}
+
+	&__heading {
+		margin: 0 0 rem-calc(25px) 0;
+		font-size: rem-calc(18px);
+		line-height: rem-calc(24px);
+		color: $color-gray-dark;
+	}
+
+	@media screen and #{breakpoint(large)} {
+		margin-top: 60px;
+		margin-bottom: 100px;
+	}
+}

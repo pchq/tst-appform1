@@ -1,0 +1,33 @@
+.script-skill {
+	padding-top: rem-calc(60px);
+	padding-bottom: rem-calc(35px);
+
+	&__graph {
+		svg {
+			width: 255px;
+		}
+
+		@include breakpoint(small only) {
+			margin-bottom: rem-calc(25px);
+		}
+	}
+
+	&__value {
+		font-weight: 900;
+		font-size: rem-calc(50px);
+		line-height: 0.6;
+		transition: color 0.3s;
+
+		&.is-yellow {
+			color: $color-yellow;
+		}
+
+		&.is-green {
+			color: $color-green;
+		}
+
+		&.is-blue {
+			color: $color-blue;
+		}
+	}
+}

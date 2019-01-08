@@ -1,0 +1,52 @@
+.skills {
+	&__item {
+		min-height: 58px;
+	}
+
+	&__item label {
+		position: relative;
+		padding-left: 25px;
+		letter-spacing: rem-calc(2px);
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+	&__item label span {
+		&::before,
+		&::after {
+			content: " ";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: block;
+			width: 19px;
+			height: 19px;
+			transform: translate(0, -50%);
+			transition: 0.2s;
+		}
+
+		&::before {
+			z-index: 1;
+			border-radius: 6px;
+			background: #eee;
+		}
+
+		&::after {
+			z-index: 2;
+			background: url("../images/check.png") no-repeat;
+			opacity: 0;
+		}
+	}
+
+	&__item input[type="checkbox"] {
+		display: none;
+
+		&:checked + span::before {
+			background: $color-blue;
+		}
+
+		&:checked + span::after {
+			opacity: 1;
+		}
+	}
+}

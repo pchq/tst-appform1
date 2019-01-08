@@ -1,0 +1,45 @@
+.main-info {
+	position: relative;
+
+	&::before {
+		content: " ";
+		position: absolute;
+		right: 5px;
+		bottom: 15px;
+		z-index: 1;
+		display: block;
+		width: 184px;
+		height: 166px;
+		background: url("../images/stamp.png") no-repeat;
+	}
+
+	&__photo {
+		text-align: center;
+
+		img {
+			border-radius: 50%;
+			height: auto;
+			max-width: 140px;
+		}
+
+		@include breakpoint(small only) {
+			margin-bottom: rem-calc(25px);
+		}
+	}
+
+	&__field {
+		margin-bottom: rem-calc(30px);
+	}
+
+	&__field input[type="text"] {
+		outline: none;
+		border: none;
+		border-bottom: #333 2px solid;
+		padding: 0;
+		padding-bottom: rem-calc(9px);
+		width: 100%;
+		text-transform: uppercase;
+		color: inherit;
+		background: transparent;
+	}
+}
